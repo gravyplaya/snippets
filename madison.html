@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Dictionary Search</title>
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>  
+        <script type="application/javascript">
+
+var input = "quaileditorcremewordenter";            
+var Dict = new Array("editor", "trial", "word");
+
+$(function() {
+   $.each(Dict, function(i,v) {
+      var foundWord = input.search(v) 
+      if (foundWord > 0) { $("p#result").append(Dict[i] +" "); }
+ })
+});            
+
+        </script>
+    </head>
+    <body>
+
+<p>Dictionary: editor trial word</p>  
+<p>Input string = "quaileditorcremewordenter" quail editor creme word enter</p>        
+        <p id="result">Output: </p>
+    </body>
+</html>
